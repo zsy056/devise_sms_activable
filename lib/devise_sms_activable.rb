@@ -8,6 +8,8 @@ require 'devise_sms_activable/controllers/url_helpers'
 require 'devise_sms_activable/controllers/helpers'
 require 'devise_sms_activable/rails'
 
+require 'devise_sms_sender'
+
 module Devise
   mattr_accessor :sms_confirm_within
   @@sms_confirm_within = 2.days
