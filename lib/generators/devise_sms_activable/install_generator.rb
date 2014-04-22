@@ -45,7 +45,10 @@ CONTENT
       end
       
       def copy_default_smser
-        copy_file "lib/sms_sender.rb", "lib/devise_sms_sender.rb"
+        if !File.exist?('lib/devise')
+          Dir.mkdir('lib/devise')
+        end
+        copy_file "lib/sms_sender.rb", "lib/devise/sms_sender.rb"
       end
     end
   end
